@@ -9,12 +9,14 @@ to work with these tools – scouring GitHub issues, reading blog posts, and
 experimenting on my own – and everything that I've learned will be posted
 here.
 
-Am I missing a testing test up that you'd like to see? Make a request.
+Am I missing a testing test up that you'd like to see?
+[Make a request](https://github.com/jmeas/testing-with-babel), or better yet,
+submit a PR!
 
 #### How it works
 
-This repository is a collection of npm modules which all live in the
-`examples` directory. Every example has a README that explains how to get it
+This repository is a collection of examples which all live in the `examples`
+directory. Every example has a README that explains how to get it
 set up locally, and then steps through how it works.
 
 To begin, you'll want to clone this repository. You can then either browse
