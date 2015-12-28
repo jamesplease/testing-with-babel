@@ -29,6 +29,7 @@ These examples are suitable for libraries that you wish to test in Node only.
 
 - [Mocha + Chai, run on the CLI](examples/mocha-cli)
 - [Mocha + Chai + Gulp](examples/mocha-gulp)
+- [Mocha + Chai + Grunt](examples/mocha-grunt)
 
 #### Browser-only Examples
 
@@ -50,16 +51,8 @@ This section are examples showing how to run the tests in a browser and in Node.
 - Mocha
   - [x] CLI
   - [x] Gulp
-  - [ ] Grunt
-- Mocha + Karma (no coverage)
-  - [ ] CLI
-  - [ ] Gulp
-  - [ ] Grunt
-- Mocha + Karma (with coverage)
-  - [ ] CLI
-  - [ ] Gulp
-  - [ ] Grunt
-- Mocha/Chai + Istanbul
+  - [x] Grunt
+- Mocha + Istanbul code coverage
   - [ ] CLI
   - [ ] Gulp
   - [ ] Grunt
@@ -69,8 +62,10 @@ This section are examples showing how to run the tests in a browser and in Node.
 - [ ] Mocha + Runner HTML file
 - [ ] Mocha + PhantomJS CLI
 - [ ] Mocha + PhantomJS + Runner HTML file
-- [ ] Mocha + Karma
-- [ ] Mocha + Karma + Runner HTML File
+- [ ] Mocha + Karma (no coverage)
+- [ ] Mocha + Karma (with coverage)
+- [ ] Mocha + Karma (without coverage) + Runner HTML File
+- [ ] Mocha + Karma (with coverage) + Runner HTML File
 
 ##### Node + Browser
 
