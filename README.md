@@ -27,9 +27,15 @@ of contents below.
 
 These examples are suitable for libraries that you wish to test in Node only.
 
+**Without code coverage**
+
 - [Mocha + Chai, run on the CLI](examples/mocha-cli)
 - [Mocha + Chai + Gulp](examples/mocha-gulp)
 - [Mocha + Chai + Grunt](examples/mocha-grunt)
+
+**With code coverage**
+
+- [Mocha + Chai + Istanbul, run on the CLI](examples/mocha-istanbul-cli)
 
 #### Browser-only Examples
 
@@ -52,8 +58,8 @@ This section are examples showing how to run the tests in a browser and in Node.
   - [x] CLI
   - [x] Gulp
   - [x] Grunt
-- Mocha + Istanbul code coverage
-  - [ ] CLI
+- Mocha + Istanbul
+  - [x] CLI
   - [ ] Gulp
   - [ ] Grunt
 
