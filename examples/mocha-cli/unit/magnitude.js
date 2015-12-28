@@ -16,4 +16,10 @@ describe('magnitude', () => {
       expect(magnitude(0, 0)).to.equal(0);
     });
   });
+
+  describe('when passed in (3, 4)', () => {
+    it('should return 5', () => {
+      expect(magnitude(3, 4)).to.equal(5);
+    });
+  });
 });
