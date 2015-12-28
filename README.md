@@ -11,19 +11,22 @@ here.
 
 Am I missing a testing test up that you'd like to see? Make a request.
 
-#### How does it work
+#### How it works
 
-There are two files in the `src` directory of this repository. These are
-the files that I will be testing. The unit tests can be found in the `unit`
-directory.
+This repository is a collection of npm modules which all live in the
+`examples` directory. Every example has a README that explains how to get it
+set up locally, and then steps through how it works.
 
-Both the source and unit test files are written in ES2015. This means t
+To begin, you'll want to clone this repository. You can then either browse
+through the list of examples in the `examples` directory, or in the table
+of contents below.
 
 #### Node-only Examples
 
 These examples are suitable for libraries that you wish to test in Node only.
 
-- [Mocha + Chai, run on the CLI](examples/mocha-cli/README.md)
+- [Mocha + Chai, run on the CLI](examples/mocha-cli)
+- [Mocha + Chai + Gulp](examples/mocha-gulp)
 
 #### Browser-only Examples
 
@@ -44,7 +47,7 @@ This section are examples showing how to run the tests in a browser and in Node.
 
 - Mocha
   - [x] CLI
-  - [ ] Gulp
+  - [x] Gulp
   - [ ] Grunt
 - Mocha + Karma (no coverage)
   - [ ] CLI
