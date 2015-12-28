@@ -25,7 +25,7 @@ Let's break down that command piece-by-piece:
 
 This is just running [the Mocha CLI](https://mochajs.org/#usage). It doesn't
 need to be installed globally because we've specified `mocha` as a
-`devDepdendency` for our package.
+`devDependency` for our package.
 
 ##### `unit/*.js`
 
