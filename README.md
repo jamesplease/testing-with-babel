@@ -21,28 +21,55 @@ Both the source and unit test files are written in ES2015. This means t
 
 #### Node-only Examples
 
+These examples are suitable for libraries that you wish to test in Node only.
+
 - [Mocha + Chai, run on the CLI](examples/mocha-cli/README.md)
+
+#### Browser-only Examples
+
+These are good for tests that you only want to run in browser environments,
+and not Node.
+
+*Coming soon*
+
+#### Browser + Node environments
+
+This section are examples showing how to run the tests in a browser and in Node.
+
+*Coming soon*
 
 #### To-do
 
 ##### Node only
 
-These examples are suitable for libraries that you wish to test in Node only.
-
 - Mocha
-  - CLI
-  - Gulp
-  - Grunt
+  - [x] CLI
+  - [ ] Gulp
+  - [ ] Grunt
 - Mocha + Karma (no coverage)
-  - CLI
-  - Gulp
-  - Grunt
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
 - Mocha + Karma (with coverage)
-  - CLI
-  - Gulp
-  - Grunt
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
 - Mocha/Chai + Istanbul
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
+
+##### Browser only
+
+- [ ] Mocha + Runner HTML file
+- [ ] Mocha + PhantomJS CLI
+- [ ] Mocha + PhantomJS + Runner HTML file
+- [ ] Mocha + Karma
+- [ ] Mocha + Karma + Runner HTML File
 
 ##### Node + Browser
 
-- Mocha/Chai + JSDom
+- Mocha/Chai + Karma
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
