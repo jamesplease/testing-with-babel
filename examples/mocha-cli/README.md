@@ -33,9 +33,9 @@ These are where the unit tests are located.
 
 #### `--compilers js:babel-register`
 
-This is [an option exposed by Mocha's CLI](https://mochajs.org/#compilers). It
-means that for every file ending in `js`, we use the `babel-register` library
-to compile our code before running the tests.
+This is [an option exposed by Mocha's CLI](https://mochajs.org/#compilers). The
+value we've passed indicates that for all files ending in `js`, we wish to use
+the `babel-register` library to compile our code before running the tests.
 
 The `babel-register` library is a tool that transpiles anything that we
 `require` in. Because `mocha` is a Node tool, it ultimately `require`s in
