@@ -37,5 +37,3 @@ export default class Vector {
     return magnitude(this._x, this._y);
   }
 }
-//
-// export default Vector;
