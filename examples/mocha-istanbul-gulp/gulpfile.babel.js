@@ -1,21 +1,24 @@
 import gulp from 'gulp';
 import mocha from 'gulp-mocha';
+import istanbul from 'gulp-istanbul';
+import { Instrumenter } from 'isparta';
 
-// Run our mocha tests
-function _mocha() {
+function test() {
   return gulp.src('unit/*.js')
     .pipe(mocha());
 }
 
-// Hook `require` to transpile our test code
-function _registerBabel() {
-  require('babel-register');
-}
-
-function test() {
-  _registerBabel();
-  return _mocha();
+function coverage(done) {
+  gulp.src(['src/*.js'])
+    .pipe(istanbul({ instrumenter: Instrumenter }))
+    .pipe(istanbul.hookRequire())
+    .on('finish', function() {
+      return test()
+      .pipe(istanbul.writeReports())
+      .on('end', done);
+    });
 }
 
 // Run our tests as the default task
 gulp.task('default', test);
+gulp.task('coverage', coverage);

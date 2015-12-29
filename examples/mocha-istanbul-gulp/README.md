@@ -1,6 +1,7 @@
-### Mocha + Gulp
+### Mocha + Istanbul + Gulp
 
-This example shows how to use Babel in conjunction with Mocha and Gulp.
+This example shows how to use Babel in conjunction with Mocha, Istanbul, and
+Gulp.
 
 ### Installation
 
@@ -14,24 +15,7 @@ Run `npm test`
 
 ### How it works
 
-When `npm test` is run, the aliased `script` in our `package.json` is run. That
-alias is simply `gulp`, which runs the default `gulp` task.
-
-This task is defined in `gulpfile.babel.js`. Let's look at that task.
-
-#### `gulp-register`
-
-The most important thing is that we `require` in `babel-register`. This
-makes it so that every subsequent file that is required will be transpiled
-by Babel.
-
-This is done in the `_registerBabel` function.
-
-#### `_mocha`
-
-The `_mocha` function is the standard way to use mocha with Gulp; there's
-nothing special about it. All of the magic comes from the `babel-register`
-call, which happens *before* the tests are run.
+*Coming soon*
 
 #### `.babelrc`
 
