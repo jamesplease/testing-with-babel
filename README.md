@@ -62,6 +62,27 @@ This section are examples showing how to run the tests in a browser and in Node.
 
 *Coming soon*
 
+### FAQ
+
+**Are there any limitations to using Istanbul with Babel?**
+
+Yes. The tool isparta is used to make Istanbul work with transpiled code, and
+by and large it works great. The coverage report will look like your original
+ES2015 code, and report accurately on the `lines` that are covered.
+
+However, every other property that Istanbul measures will *still* be based on
+the transpiled code. So the `statements`, `branches`, and `functions`
+measurements will be based off of the code that Babel computes.
+
+I haven't found this to be a problem on any of my projects, because I use
+code coverage as a tool to give me an idea of how complete my test coverage is.
+The approximation provided to me by using it with ES2015 is equally good for
+accomplishing that goal.
+
+However, if you're someone who requires that the coverage data be more precise,
+then you may want to shy away from Babel for now (or update isparta to be
+more accurate!)
+
 #### To-do
 
 ##### Node only
