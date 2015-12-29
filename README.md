@@ -23,12 +23,12 @@ To begin, you'll want to clone this repository. You can then either browse
 through the list of examples in the `examples` directory, or in the table
 of contents below.
 
-#### What features of Babel are tested?
+#### What presets of Babel are used?
 
 All of the examples in this project use only the
 [ES2015 preset](http://babeljs.io/docs/plugins/preset-es2015/). This is because
-this is the preset that the vast majority of people will care about: it's what
-gives Babel the ability to transpile your ES2015 code into ES5 code.
+this is the preset that the vast majority of people will care about: it's the
+one that lets you author things in ES2015.
 
 In the future, I plan to add some data around which set ups allow you to use
 additional presets, like, say, `stage-2`. In the meantime, you can test on your
