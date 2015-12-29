@@ -16,32 +16,51 @@ To run the tests, run `npm test`. For code coverage, run `npm run coverage`.
 
 ### How it works
 
-When `npm test` is run, the aliased `script` in our `package.json` is run. We
-can see in `package.json` that the associated command is:
-`mocha unit/*.js --compilers js:babel-register`.
+For a description of the `npm test` command, refer to the
+[`mocha-cli` example](../mocha-cli#how-it-works). The script here is identical
+to the one in that example.
 
-Let's break down that command piece-by-piece:
+What's new to this example is the `npm run coverage` script. I'd love to
+walk through it step-by-step with you, but I'd be lying if I said I understood
+*exactly* how it works. I'll do my best and explain what I do know, though.
 
-##### `mocha`
+The first thing you might be wondering is...where's Instanbul? This example
+*does* use Istanbul, just indirectly.
+[isparta](https://github.com/douglasduteil/isparta) is a wrapper for Istanbul
+that allows us to write ES2015 code.
 
-This is just running [the Mocha CLI](https://mochajs.org/#usage). It doesn't
-need to be installed globally because we've specified `mocha` as a
-`devDependency` for our package.
+Back to the command. It starts off with `babel-node`, which is
+[a tool](http://babeljs.io/docs/usage/cli/#babel-node) provided by Babel. What
+it does is automatically transpile any subsequent scripts run in Node.
 
-##### `unit/*.js`
+The script that we execute is `node_modules/.bin/isparta`. The directory
+`node_modules/.bin` is provided to us by `npm`: it's a collection of all of the
+executables in [the locally-installed node_modules](https://docs.npmjs.com/files/folders#executables).
 
-These are where the unit tests are located.
+This tells `babel-node` to execute `isparta`'s executable.
 
-#### `--compilers js:babel-register`
+Next up is `cover`. This seems to be an API that `isparta` inherited from
+`istanbul`.
 
-This is [an option exposed by Mocha's CLI](https://mochajs.org/#compilers). The
-value we've passed indicates that for all files ending in `js`, we wish to use
-the `babel-register` library to compile our code before running the tests.
+The last piece is `_mocha`, which users of `istanbul` will know differs from
+the standard `istanbul` CLI. What this is is a reference to the `_mocha`
+executable from the `mocha` npm package. Did you know that such a thing
+existed? As a consumer of mocha, and not a maintainer, I did not before
+using isparta.
 
-The `babel-register` library is a tool that transpiles anything that we
-`require` in. Because `mocha` is a Node tool, it ultimately `require`s in
-each of our unit tests. This is what allows us to write our tests in ES2015
-as well as our library itself.
+We can see from [the repository](https://github.com/mochajs/mocha/tree/d811eb9614e5b459dabb4f2496e69f961decec90/bin)
+that mocha's main , `mocha`, is a small wrapper around the `_mocha` executable,
+which does most of the heavy lifting.
+
+`isparta` only works with `_mocha`, and not `mocha`. Why? I'm not sure. That's
+what I meant about not fully understanding this command. I learned how to do
+this from
+[the `isparta` documentation](https://github.com/douglasduteil/isparta#usage),
+but the docs do go into much depth as to why it must work this way.
+
+I'd love to elaborate further on how this command works. Got any ideas? Please
+let me know
+[by opening an issue](https://github.com/jmeas/testing-with-babel/issues/new)!
 
 #### `.babelrc`
 
