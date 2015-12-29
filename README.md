@@ -95,6 +95,14 @@ more accurate!)
   - [x] CLI
   - [x] Gulp
   - [ ] Grunt
+- Mocha + JSDom
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
+- Mocha + Istanbul + JSDom
+  - [ ] CLI
+  - [ ] Gulp
+  - [ ] Grunt
 
 ##### Browser only
 
