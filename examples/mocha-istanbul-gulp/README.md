@@ -11,11 +11,23 @@ Gulp.
 
 ### Running the tests
 
-Run `npm test`
+To only run the unit tests, run `npm test`. For coverage reports, run
+`npm coverage`.
 
 ### How it works
 
-*Coming soon*
+The `npm test` command is explained in
+[the `mocha-gulp` example](../mocha-gulp#how-it-works); it's identical to the
+one here.
+
+The `npm run coverage` command is new, though. It's basically a minor
+refactor of the example given in the `gulp-istanbul`
+[documentation](https://github.com/SBoudrias/gulp-istanbul#nodejs-testing);
+whereas they recommend using two gulp tasks, it can be made into one by using
+stream events.
+
+In addition, the [`instrumenter` property](https://github.com/SBoudrias/gulp-istanbul#instrumenter)
+is utilized, which is the recommended way to use isparta with `gulp-istanbul`.
 
 #### `.babelrc`
 
