@@ -17,21 +17,24 @@ Run `npm test`
 When `npm test` is run, the aliased `script` in our `package.json` is run. That
 alias is simply `gulp`, which runs the default `gulp` task.
 
-This task is defined in `gulpfile.babel.js`. Let's look at that task.
+This task is defined in `gulpfile.babel.js`. Let's look at that file.
 
-#### `gulp-register`
+#### `gulpfile.babel.js`
 
-The most important thing is that we `require` in `babel-register`. This
-makes it so that every subsequent file that is required will be transpiled
-by Babel.
+You may be surprised to see that this file is exactly the same file as if we
+weren't using Babel. You might be wondering how that works.
 
-This is done in the `_registerBabel` function.
+The trick is that we've implicitly told Babel to transpile all of our files.
+That is, in fact, the way that `gulpfile.babel.js` works. When you run any
+`gulp` command within a Babel'd `gulpfile`, you will notice on the command line
+that the first thing that is output is:
+`Requiring external module babel-core/register`.
 
-#### `_mocha`
+That's the code that transpiles everything that follows.
 
-The `_mocha` function is the standard way to use mocha with Gulp; there's
-nothing special about it. All of the magic comes from the `babel-register`
-call, which happens *before* the tests are run.
+If we **weren't** using `gulpfile.babel.js`, we would need to manually require
+in the module `babel-register`. Do keep that in mind if you decide not to use
+ES2015 in your `gulpfile`.
 
 #### `.babelrc`
 
