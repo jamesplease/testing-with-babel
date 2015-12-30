@@ -13,6 +13,7 @@
     "babel-register": "^6.3.13",
     "chai": "^3.4.1",
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-mocha-test": "^0.12.7"
   }
 }
