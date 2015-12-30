@@ -1,5 +1,9 @@
 # testing-with-babel
 
+> This is an active work-in-progress project. I plan to add 1-3 new
+> configurations per day, so keep your eye on this project if you don't see
+> what you're looking for!
+
 Babel is a fantastic tool for transpiling JavaScript, but it can be difficult
 to get it working with other tools in the Node ecosystem.
 
